@@ -1,0 +1,45 @@
+<br>
+<h1>
+  {{title}}
+</h1>
+<form method="POST" enctype="multipart/form-data">
+  {{! Input names have to match the name of the fields in the mongo schema object }}
+  {{! Mapping is not automatic, but it's best practices }}
+  <fieldset>
+    <label for="name" class="col-2">
+      Name:
+    </label>
+    <input name="name" id="name" required />
+  </fieldset>
+  <fieldset>
+    <label for="genre" class="col-2">
+      Genre:
+    </label>
+    <input name="genre" id="genre" />
+  </fieldset>
+  <fieldset>
+    <label for="singer" class="col-2">
+      Musician:
+    </label>
+    <input name="singer" id="singer" required />
+  </fieldset>
+  <fieldset>
+    <label for="filename" class="col-2">Song:</label>
+    <input type="file" name="filename" id="filename" />
+  </fieldset>
+  <fieldset>
+    <label for="playlist" class="col-2">
+      Playlist:
+    </label>
+    <select name="playlist" id="playlist">
+      {{! for loop to render options }}
+      {{#each playlists}}
+        <option>{{ this.name }}</option>
+      {{/each}}
+    </select>
+  </fieldset>
+  <br>
+  <button class="btn btn-primary">
+    Save
+  </button>
+</form>

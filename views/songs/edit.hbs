@@ -1,0 +1,43 @@
+<br>
+<h1>
+  {{title}}
+</h1>
+<form method="POST">
+  <fieldset>
+    <label for="name" class="col-2">
+      Name:
+    </label>
+    <input name="name" id="name" required value="{{song.name}}" />
+  </fieldset>
+  <fieldset>
+    <label for="genre" class="col-2">
+      Genre:
+    </label>
+    <input
+      name="genre"
+      id="genre"
+      value="{{song.genre}}"
+    />
+  </fieldset>
+  <fieldset>
+    <label for="singer" class="col-2">
+      Singer:
+    </label>
+    <input name="singer" id="singer" required value="{{song.singer}}" />
+  </fieldset>
+  <fieldset>
+    <label for="playlist" class="col-2">
+      Playlist:
+    </label>
+    <select name="playlist" id="playlist">
+      {{#each playlists}}
+        {{! Use HBS helper function to customize rendering }}
+        {{createOptionElement this.name ../song.playlist}}
+      {{/each}}
+    </select>
+  </fieldset>
+  <br>
+  <button class="offset-1 btn btn-primary">
+    Save
+  </button>
+</form>

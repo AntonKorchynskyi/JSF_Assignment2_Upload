@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaylistManager</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    {{!-- <script src="/javascript/scripts.js"></script> --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
+  </head>
+  <body id="bodyId">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="/">
+        <img src="/images/music-note-single-svgrepo-com.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        PlaylistManager
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/Playlists">Playlists</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Songs">Songs</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          {{#if user}}
+            <li class="nav-item"><a class="nav-link" href="#">{{user.username}}</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Logout">Logout</a></li>
+          {{else}}
+            <li class="nav-item"><a class="nav-link" href="/Register">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Login">Login</a></li>
+          {{/if}}
+        </ul>
+    </div>
+  </nav>
+  {{{body}}}
+  <footer class="d-flex flex-wrap justify-content-between py-3 my-4 border-top">
+    <p>Anton Korchynskyi - PlaylistManager App - Assignment 2 - JS Frameworks Course</p>
+  </footer>
+    {{! Bootstrap JS }}
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"
+      >
+    </script>
+    <script src="/javascripts/scripts.js"></script>
+  </body>
+  
+</html>

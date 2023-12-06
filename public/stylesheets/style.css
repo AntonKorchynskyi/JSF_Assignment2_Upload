@@ -1,0 +1,42 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#bodyId {
+  background-color: #FFC0CB;
+}
+
+.a-link {
+  text-align: center;
+  padding: 0.5em;
+  background-color: lightblue;
+  color: black;
+  border: 2px solid black;
+}
+
+.a-link:hover {
+  text-decoration: none;
+  background-color: black;
+  color: lightblue;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+  border: 2px solid black;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem;  
+}
+
+footer {
+  color: rgb(108, 108, 108);
+  font-size: 0.5rem;
+}
+
+
+
